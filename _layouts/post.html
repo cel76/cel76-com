@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}img/bg-0{{ page.date | date:"%d" | modulo:site.headerImageCount | plus:1 }}.jpg{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				{{ content }}
+
+                <hr>
+
+                {% if page.categories or page.tags %}
+                    <p>
+                    {% if page.categories %}Posted in {{ page.categories | category_links }}. {% endif %}
+                    {% if page.tags %}Tagged in {{ page.tags | tag_links }}.{% endif %}
+                    </p>
+                {% endif %}
+
+                {% if site.related_posts.size > 1 %}
+                    <hr>
+                    <h3>Related Articles</h3>
+                    <ul>
+                    {% for post in site.related_posts limit: site.related_posts_count %}
+                        <li><a href="{{ post.url }}">{% unless post.title == '' or post.title == null %}{{ post.title }}{% else %}{% capture excerpt %}{{ post.excerpt | markdownify | strip_html | strip_newlines | truncatewords: 7 }}{% endcapture %}{% unless excerpt == '' or excerpt == null %}{{ excerpt }}{% else %}{{ post.date | date: "%B %-d, %Y at %r" }}{% endunless %}{% endunless %}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+
+                <hr>
+
+                <ul class="pager">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<p>&nbsp;</p>
