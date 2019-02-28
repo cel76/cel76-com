@@ -5,8 +5,8 @@
         <description>cel76 - </description>
         <link>http://cel76.com</link>
         <link>http://cel76.com</link>
-        <lastBuildDate>2018-07-04T15:27:43+00:00</lastBuildDate>
-        <pubDate>2018-07-04T15:27:43+00:00</pubDate>
+        <lastBuildDate>2019-02-28T11:41:49+00:00</lastBuildDate>
+        <pubDate>2019-02-28T11:41:49+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -43,6 +43,17 @@ To me it’s timeless. The track was remixed by Paul Weller’s long time produc
                 <link>http://cel76.com/music/2018/04/12/Pet-Shop-Boys-Two-Divided-by-Zero.html</link>
                 <guid>http://cel76.com/music/2018/04/12/Pet Shop Boys - Two Divided by Zero</guid>
                 <pubDate>2018-04-12T15:22:53+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Testing Atom Editor</title>
+                <description>&lt;div class=&quot;youtube-video&quot;&gt;&lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;420&quot; src=&quot;https://www.youtube.com/embed/aiXNKHKWlmY?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Test&lt;/p&gt;
+</description>
+                <link>http://cel76.com/music/2018/04/11/Test-Test.html</link>
+                <guid>http://cel76.com/music/2018/04/11/Test - Test</guid>
+                <pubDate>2018-04-11T15:22:53+00:00</pubDate>
         </item>
 
 
